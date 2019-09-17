@@ -18,8 +18,19 @@ def paste(file):
         "api_paste_code":get_file_data(file),
     }
 
-    r = re.post("https://pastebin.com/api/api_post.php", data=api_data)
+    ext = file.split(".")[-1]
+    with open("formats.json", "r") as file:
+            fmt = json.loads(file.read())
+
+            if ext in fmt:
+                ext = fmt[ext]
+            else:
+                ext = "text"
     
+    api_data["api_paste_format"] = ext
+
+    r = re.post("https://pastebin.com/api/api_post.php", data=api_data)
+
     return r.text
 
 if __name__ == "__main__":

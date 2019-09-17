@@ -1,0 +1,19 @@
+{
+    "c": "c",
+    "cpp": "cpp",
+    "cs": "csharp",
+    "css":"css",
+    "html":"html5",
+    "go": "go",
+    "java": "java",
+    "jl": "julia",
+    "js": "javascript",
+    "json": "json",
+    "lua": "lua",
+    "php": "php",
+    "ps1": "powershell",
+    "py": "python",
+    "r": "rsplus",
+    "rb": "ruby",
+    "rs": "rust"
+}
