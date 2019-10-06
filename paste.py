@@ -1,4 +1,5 @@
 import requests as re
+import pyperclip
 import json
 import sys
 
@@ -36,4 +37,6 @@ def paste(file):
 if __name__ == "__main__":
     file = sys.argv[1]
 
-    print("File pasted to: ", paste(file))
+    url = paste(file)
+    pyperclip.copy(url)
+    print("File pasted to:", url)
